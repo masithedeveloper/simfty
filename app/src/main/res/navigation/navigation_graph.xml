@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/catsFragment"
+    android:id="@+id/navigation_graph">
+
+    <fragment
+        android:id="@+id/catsFragment"
+        android:name="com.simfyafrica.assessment.ui.cats.CatsFragment"
+        android:label="CatsFragment"
+
+        tools:layout="@layout/cats_fragment">
+        <action
+            android:id="@+id/catsFragmentTocatDetailsFragment"
+            app:destination="@id/catDetailsFragment" />
+        <argument
+            android:name="cat_id"
+            android:defaultValue="@null"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/catDetailsFragment"
+        android:name="com.simfyafrica.assessment.ui.cats.CatDetailsFragment"
+        tools:layout="@layout/cat_details_fragment"/>
+
+</navigation>

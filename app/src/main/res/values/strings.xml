@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Simfy Africa</string>
+    <string name="cats_list_url">http://thecatapi.com/api/images/</string>
+    <string name="cat_details_url">https://api.thecatapi.com/v1/images/</string>
+    <string name="loading">Please wait...</string>
+    <string name="cat_description">%1$s cat whose fur is a single color, including black, is known as a "solid" or "self". A "solid black" cat may be coal black, grayish black, or brownish black. Most solid-colored cats result from a recessive gene that suppresses the tabby pattern. Sometimes the tabby pattern is not completely suppressed; faint markings may appear in certain lights, even on a solid black cat. A cat having black fur with white roots is known as a "black smoke.</string>
+
+    <string name="cat_moew">http://www.orangefreesounds.com/wp-content/uploads/2019/07/Cute-cat-meowing-on-the-street.mp3</string>
+</resources>

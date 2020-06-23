@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="catDetailViewModel" type="com.simfyafrica.assessment.ui.cats.CatDetailsViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/ll_cats_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/loading"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_text"
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"
+                android:text="@{catDetailViewModel.catData.title}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="#DE000000"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <LinearLayout
+                android:id="@+id/image_desciption_layout"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/details_media_image"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    android:src="@drawable/placeholder"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    app:image_url="@{catDetailViewModel.catData.url}"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/description_text"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="@{catDetailViewModel.catData.description}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#8A000000"
+                    app:layout_constraintRight_toLeftOf="@+id/media_image"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/play_sound_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Play Sound"
+                app:layout_constraintTop_toBottomOf="@+id/image_desciption_layout"
+                tools:layout_editor_absoluteX="10dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>>
+
+        </RelativeLayout>
+
+</layout>
